@@ -340,7 +340,7 @@ header .PORTFOLIO p {
   z-index: -1;
   width: 100%;
   height: 1025px;
-  background-image: url(../img/blue-dot.png);
+  background-image: url(https://NINOMIYA-S.github.io/portfolio/blue-dot.png);
 }
 .top__work .background span {
   display: inline-block;
