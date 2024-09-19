@@ -305,7 +305,6 @@ header .PORTFOLIO p {
   float: right;
   margin: 20px 0 0 0;
   font-size: 25px;
-  color: white;
   letter-spacing: 5px;
   text-align: right;
   position: absolute;
@@ -326,7 +325,11 @@ header .PORTFOLIO p {
 .top__profile .profile__card li:nth-of-type(2) p:nth-of-type(2) i {
   margin-left: 10px;
 }
-.top__profile .profile__card li:nth-of-type(2) p:nth-of-type(2):hover {
+.top__profile .profile__card li:nth-of-type(2) p:nth-of-type(2) a {
+  text-decoration: none;
+  color: white;
+}
+.top__profile .profile__card li:nth-of-type(2) p:nth-of-type(2) a:hover {
   color: #EDE86F;
   transition-duration: 0.2s;
 }
@@ -340,7 +343,7 @@ header .PORTFOLIO p {
   z-index: -1;
   width: 100%;
   height: 1025px;
-  background-image: url(https://NINOMIYA-S.github.io/portfolio/blue-dot.png);
+  background-image: url(../img/blue-dot.png);
 }
 .top__work .background span {
   display: inline-block;
