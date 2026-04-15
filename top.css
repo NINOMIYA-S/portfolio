@@ -8,8 +8,26 @@ body {
 }
 
 html {
+  /* height: 100%; */
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 15px;
 }
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+
+main {
+  flex-grow: 1;
+  width: 100%;
+}
+
 
 h2 {
   font-size: 25px;
@@ -18,87 +36,97 @@ h2 {
   margin: 30px auto;
 }
 
+.navi li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 header {
   width: 100%;
-  height: 950px;
+  height: 50rem;
   background-color: #44bbe7;
 }
 header .top__line {
   content: "";
   position: absolute;
   z-index: 2;
-  width: 6px;
-  left: 11.7em;
-  height: 287px;
+  width: 7px;
+  left: 10.4%;
+  top: 0;
+  height: 39.1vh;
   background-color: white;
 }
 header .top__line2 {
   content: "";
   position: absolute;
   z-index: 2;
-  width: 6px;
-  left: 11.7em;
-  top: 608px;
-  height: 272px;
+  width: 7px;
+  left: 10.4%;
+  top: 500px;
+  height: 39.1vh;
   background-color: #EDE86F;
 }
 header .NINOMIYA {
   position: absolute;
   z-index: 4;
-  left: 11.42em;
-  top: 180px;
+  left: 10.2%;
+  top: 144px;
 }
 header .NINOMIYA p {
   color: white;
   font-size: 55px;
-  letter-spacing: 15px;
+  letter-spacing: 30%;
   font-family: "Roboto", sans-serif;
 }
 header .SAKI {
   position: absolute;
   z-index: 4;
-  left: 11.42em;
-  top: 360px;
+  left: 10.2%;
+  top: 280px;
 }
 header .SAKI p {
   color: white;
   font-size: 55px;
-  letter-spacing: 15px;
+  letter-spacing: 30%;
   font-family: "Roboto", sans-serif;
 }
 header .PORTFOLIO {
   position: absolute;
   z-index: 4;
-  left: 11.42em;
-  top: 540px;
+  left: 10.2%;
+  top: 433px;
 }
 header .PORTFOLIO p {
   color: #EDE86F;
   font-size: 55px;
-  letter-spacing: 15px;
+  letter-spacing: 30%;
   font-family: "Roboto", sans-serif;
 }
 
 .anchor {
   display: block;
-  padding-top: 70px;
-  margin-top: -70px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 
 .top__menu {
   z-index: 5;
-  width: 50%;
-  height: 80px;
+  width: 60vw;
+  height: 70px;
   margin: 30px auto 0;
   position: fixed;
-  left: 25%;
+  left: 0;
+  right: 0;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.35);
 }
 .top__menu nav {
   display: flex;
-  height: 80px;
+  height: 70px;
   margin: 0 auto;
   align-items: center;
   width: 100%;
@@ -109,19 +137,21 @@ header .PORTFOLIO p {
   vertical-align: bottom;
   padding: 0;
   margin: 0 auto;
+  width: 80%;
 }
+
 .top__menu li {
   display: inline-block;
   list-style: none;
   font-size: 25px;
   font-weight: 600;
-  margin: 0px 20px;
+  width: calc(100%/3);
 }
 .top__menu a {
   display: block;
   text-decoration: none;
   color: #3f3f3f;
-  padding: 10px 38px 10px 20px;
+  padding: 0;
 }
 .top__menu a:hover {
   color: #44bbe7;
@@ -160,18 +190,15 @@ header .PORTFOLIO p {
   transform: translateY(20%) rotate(-45deg);
 }
 
-.top__profile {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-.top__profile .profile__scroll {
+
+.profile__scroll {
   display: flex;
-  transform: rotate(-90deg);
+  /* transform: rotate(-90deg); */
+  writing-mode: vertical-rl;
   position: absolute;
-  left: 12%;
-  /*矢印の動き1秒かけて永遠にループ*/
-  animation: arrowmove 1.5s ease-in-out infinite;
+  top: 75em;
+  left: 12.27%;
+  /* animation: arrowmove 1.5s ease-in-out infinite; */
 }
 @keyframes arrowmove {
   0% {
@@ -184,39 +211,42 @@ header .PORTFOLIO p {
     top: 132%;
   }
 }
-.top__profile .profile__scroll p {
+.profile__scroll p {
   position: absolute;
-  bottom: 10px;
-  font-size: 40px;
+  bottom: 3.5em;
+  font-size: 2.5em;
   font-weight: 600;
   margin: 0;
   align-items: center;
   display: flex;
   justify-content: center;
 }
-.top__profile .profile__scroll::before, .top__profile .profile__scroll:after {
-  transform: rotate(-90deg);
+.profile__scroll::before, .profile__scroll:after {
+  /* transform: rotate(-90deg); */
   content: "";
   position: absolute;
-  width: 6px;
+  width: 7px;
+  height: 12em;
   border-radius: 3px;
   flex-grow: 1;
 }
-.top__profile .profile__scroll::before {
-  left: -9em;
-  top: -9.9em;
-  height: 240px;
+.profile__scroll::before {
+  /* left: -9em;
+  top: -9.9em; */
+  left: -2.1em;
+  top: -29em;
   background-color: #44bbe7;
 }
-.top__profile .profile__scroll::after {
-  right: -16em;
-  top: -9.9em;
-  height: 240px;
+.profile__scroll::after {
+  /* right: -16em;
+  top: -9.9em; */
+  right: 1.75em;
+  top: -7.8em;
   background-color: #44bbe7;
 }
-.top__profile .triangle {
-  margin-top: 250px;
-  left: 9.8%;
+.triangle {
+  margin-top: 4em;
+  left: -2.2em;
   position: absolute;
   height: 16px;
   width: 16px;
@@ -224,8 +254,7 @@ header .PORTFOLIO p {
   transform: rotate(90deg) skewY(30deg) scaleX(0.86666);
   border-top-left-radius: 8px;
   justify-content: center;
-  /*矢印の動き1秒かけて永遠にループ*/
-  animation: arrowmove 1.5s ease-in-out infinite;
+  /* animation: arrowmove 1.5s ease-in-out infinite; */
 }
 @keyframes arrowmove {
   0% {
@@ -238,7 +267,7 @@ header .PORTFOLIO p {
     top: 132%;
   }
 }
-.top__profile .triangle::before {
+.triangle::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -247,7 +276,7 @@ header .PORTFOLIO p {
   transform: translateX(50%) skewX(-45deg);
   border-top-right-radius: 8px;
 }
-.top__profile .triangle::after {
+.triangle::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -256,6 +285,14 @@ header .PORTFOLIO p {
   transform: translateY(50%) skewY(-45deg);
   border-bottom-left-radius: 8px;
 }
+
+.top__profile {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+
 .top__profile .profile__card {
   width: 80%;
   margin: 80px 0 50px auto;
@@ -265,46 +302,48 @@ header .PORTFOLIO p {
 }
 .top__profile .profile__card ul {
   display: flex;
-  margin: 0 70px;
+  margin: 5%;
   padding: 0;
 }
 .top__profile .profile__card li:first-of-type {
   width: 30%;
-  margin: 80px 0;
+  margin: auto 0;
   list-style: none;
 }
 .top__profile .profile__card li:first-of-type div {
   margin: 0 auto;
-  width: 280px;
-  height: 280px;
+  width: 38vh;
+  height: 38vh;
   background: linear-gradient(145deg, #1AB2E9, #1488B3);
   border-radius: 100%;
   box-shadow: inset 10.81px 10.81px 18px #1384AD, inset -10.81px -10.81px 18px #1BB6EF;
   position: relative;
+  /* top: 15px; */
 }
 .top__profile .profile__card li:first-of-type div img {
   position: absolute;
   width: 90%;
-  bottom: 13px;
-  right: 13px;
+  bottom: 5%;
+  right: 5%;
 }
 .top__profile .profile__card li:nth-of-type(2) {
   float: right;
-  margin: 80px;
+  margin: 7% 0  7% 5%;
+  padding-left: 5%;
   width: 70%;
   list-style: none;
 }
 .top__profile .profile__card li:nth-of-type(2) p {
-  margin: 0 80px 0 0;
-  font-size: 20px;
+  margin: 0;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 2px;
   color: white;
 }
 .top__profile .profile__card li:nth-of-type(2) p:nth-of-type(2) {
   float: right;
-  margin: 20px 0 0 0;
-  font-size: 25px;
+  margin: 0;
+  font-size: 1.5rem;
   letter-spacing: 5px;
   text-align: right;
   position: absolute;
@@ -335,20 +374,19 @@ header .PORTFOLIO p {
 }
 
 .top__work {
-  margin: 150px 0 0;
+  margin: 5% 0 0;
 }
 .top__work .background {
   position: absolute;
   content: "";
   z-index: -1;
   width: 100%;
-  height: 1025px;
-  background-image: url(../img/blue-dot.png);
+  height: auto;
 }
 .top__work .background span {
   display: inline-block;
   color: #44bbe7;
-  font-size: 300px;
+  font-size: 24vw;
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -365,21 +403,22 @@ header .PORTFOLIO p {
   z-index: -1;
 }
 .top__work .contents {
-  width: 90%;
-  margin: 150px auto;
+  width: 100%;
+  margin: 5% auto;
 }
 .top__work .contents ul {
-  width: 100%;
+  width: 80%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 7% 0 4%;
   list-style: none;
 }
 .top__work .contents ul li {
-  margin: 30px;
-  width: 29.4%;
+  margin-bottom: 2%;
+  width: 31%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
@@ -400,7 +439,7 @@ header .PORTFOLIO p {
   color: #3f3f3f;
 }
 .top__work .contents ul li a .work__list {
-  padding: 40px;
+  padding: 7%;
 }
 .top__work .contents ul li a .work__list .work__img {
   margin: 10px auto;
@@ -417,32 +456,33 @@ header .PORTFOLIO p {
   height: auto;
 }
 .top__work .contents ul li a .work__list .work__text h3 {
-  margin: 10px 0;
-  font-size: 18px;
+  margin: 3% 0;
+  font-size: 1em;
 }
 .top__work .contents ul li a .work__list .work__text p {
-  margin: 10px 0 0;
-  font-size: 13px;
+  margin: 2% 0 0;
+  font-size: 0.7em;
   font-weight: 600;
   color: #9d9d9d;
 }
 
 footer {
   width: 100%;
-  height: 650px;
+  height: auto;
+  padding: 100px 0;
   background-color: #44bbe7;
 }
 footer .top__contact h2 {
-  padding: 50px 0 20px;
+  padding: 0;
   margin: 0;
   color: white;
-  font-size: 60px;
+  font-size: 40px;
   letter-spacing: 7px;
 }
 footer .top__contact p {
   margin: 20px;
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
   color: white;
 }
 footer .top__contact p i {
@@ -456,7 +496,7 @@ footer .top__contact p a:hover {
   color: #EDE86F;
   transition-duration: 0.2s;
 }
-footer p:nth-of-type(2)::after {
+/* footer p:nth-of-type(2)::after {
   content: "バナーやサイト等依頼はこちら";
   font-size: 15px;
   position: absolute;
@@ -471,10 +511,448 @@ footer p:nth-of-type(3)::after {
   display: inline-block;
   right: 45.3%;
   top: 347%;
-}
+} */
 footer .copyright {
-  margin-top: 150px;
   text-align: center;
-  font-size: 15px;
+  font-size: 10px;
   color: white;
 }/*# sourceMappingURL=top.css.map */
+
+
+
+
+
+/* --- レスポンシブ対応 --- */
+
+/* タブレット */
+@media (max-width: 1024px) {
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.anchor {
+  display: block;
+  padding-top: 50px;
+  /* margin-top: -70px; */
+}
+
+.top__profile .profile__card li:nth-of-type(2) p:nth-of-type(2) {
+  animation: none;
+  position: static;
+}
+
+.profile__scroll {
+  display: none; 
+}
+
+.triangle {
+  display: none; 
+}
+
+  header {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  header .top__line, 
+  header .top__line2 {
+    display: none; 
+    width: 6px;
+    height: 175px;
+  }
+
+  header .top__line2 {
+    top: 325px;
+  }
+
+  header .NINOMIYA, 
+  header .SAKI, 
+  header .PORTFOLIO {
+    position: relative;
+    text-align: center;
+    left: 0;
+  }
+
+  header .NINOMIYA{
+    top: 25%;
+}
+
+  header .SAKI{
+    top: 38%;
+}
+
+  header .PORTFOLIO{
+    top: 50%;
+}
+
+  header .NINOMIYA p, 
+  header .SAKI p, 
+  header .PORTFOLIO p {
+    font-size: 4vw;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+
+.top__menu nav {
+  height: 60px;
+  /* width: 90%; */
+}
+
+.top__menu {
+  width: 90%;
+  height: auto;
+  }
+
+.top__menu ol {
+  width: 90%;
+}
+  
+.top__menu li {
+  font-size: 1.3em;
+  /* margin: 0 10px; */
+}
+  
+.top__menu a {
+  /* padding: 10px 15px; */
+}
+
+.top__profile {
+  margin: 2% 0 0;
+  padding-top: 5%;
+}
+
+.top__profile .triangle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #44bbe7;
+  transform: translateX(50%) skewX(-45deg);
+  border-top-right-radius: 8px;
+}
+.top__profile .triangle::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #44bbe7;
+  transform: translateY(50%) skewY(-45deg);
+  border-bottom-left-radius: 8px;
+}
+.top__profile .profile__card {
+  width: 95%;
+  margin: 5% 0 5% auto;
+  background-color: #44bbe7;
+  border-radius: 35px 0 0 35px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.top__profile .profile__card ul {
+  display: flex;
+  margin: 5%;
+  padding: 0;
+}
+.top__profile .profile__card li:first-of-type {
+  width: 30%;
+  margin: auto 0;
+  list-style: none;
+}
+.top__profile .profile__card li:first-of-type div {
+  margin: auto;
+  width: 28vh;
+  height: 28vh;
+  background: linear-gradient(145deg, #1AB2E9, #1488B3);
+  border-radius: 100%;
+  box-shadow: inset 10.81px 10.81px 18px #1384AD, inset -10.81px -10.81px 18px #1BB6EF;
+  position: relative;
+}
+.top__profile .profile__card li:first-of-type div img {
+  position: absolute;
+  width: 90%;
+  bottom: 5%;
+  right: 5%;
+}
+.top__profile .profile__card li:nth-of-type(2) {
+  float: right;
+  margin: 7% 0 7% 5%;
+  width: 70%;
+  list-style: none;
+}
+.top__profile .profile__card li:nth-of-type(2) p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.background > .anchor {
+  padding-top: 50px;
+  margin-top: -70px;
+}
+
+.top__work {
+  margin: 7% 0 0;
+}
+
+.top__work .background {
+  margin-top: 4%;
+}
+
+.top__work .contents {
+  width: 100%;
+  margin: 0 auto 10%;
+}
+
+
+.top__work .background span {
+  display: inline-block;
+  color: #44bbe7;
+  font-size: 19rem;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: -20px;
+  -webkit-text-stroke: 5px #44bbe7;
+  writing-mode: vertical-rl;
+}
+
+.top__work .background span:nth-of-type(2) {
+  display: inline-block;
+  color: white;
+  -webkit-text-stroke: 3px #44bbe7;
+  position: absolute;
+  top: 4%;
+  left: -3%;
+  z-index: -1;
+}
+
+.top__work .contents ul {
+  padding: 11% 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top__work .contents ul li {
+  width: 45%;
+  height: auto;
+}
+
+.top__work .contents ul li a .work__list {
+  padding: 25px;
+}
+
+footer {
+  /* margin-top:auto; */
+  height: auto;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+footer .top__contact h2 {
+  padding: 40px 0 0;
+  font-size: 3rem;
+}
+
+footer .top__contact p {
+  font-size: 1.5rem;
+  margin: 1% 0;
+}
+
+footer .copyright {
+  padding: 10px 0 40px;
+  margin: 0;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.top__profile .profile__card {
+  width: 95%;
+}
+
+.top__profile .profile__card li:first-of-type div {
+  width: 28vh;
+  height: 28vh;
+}
+
+.top__work .background span {
+  font-size: 17rem;
+}
+
+}
+
+
+
+/* スマホ */
+@media (max-width: 430px) {
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  height: 100vw;
+}
+
+header .NINOMIYA p, 
+header .SAKI p, 
+header .PORTFOLIO p {
+  font-size: 6vw;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.top__menu nav {
+  height: 7%;
+  width: 90%;
+}
+
+.top__menu {
+  width: 95vw;
+  height: auto;
+  margin: 3% auto 0;
+  border-radius: 15px;
+}
+
+.top__menu ol {
+  margin: 0;
+  width: 100%;
+  height: 11vh;
+  text-align: center;
+}
+
+.top__menu li {
+  font-size: 1.2rem;
+  width: calc(100%/3);
+  margin: auto 0px;
+}
+
+.top__menu a {
+  padding: 0;
+}
+
+.top__profile {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+  .top__profile .profile__card {
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 20px;
+  }
+
+  .top__profile .profile__card ul {
+    flex-direction: column;
+    margin: 0 20px;
+    padding: 20px 0;
+  }
+
+  .top__profile .profile__card li:first-of-type,
+  .top__profile .profile__card li:nth-of-type(2) {
+    width: 100%;
+    margin: 20px 0;
+    float: none;
+  }
+
+  .top__profile .profile__card li:first-of-type {
+    margin: 0;
+  }
+
+  .top__profile .profile__card li:first-of-type div {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    margin: auto;
+  }
+
+  .top__profile .profile__card li:nth-of-type(2) p {
+    margin: 0 5px;
+  }
+
+  .top__profile .profile__card li:nth-of-type(2) p:nth-of-type(2) {
+    position: static; 
+    text-align: center;
+    margin-top: 0;
+    animation: none;
+    font-size: 1.3rem;
+  }
+
+  .profile__scroll, .triangle {
+    display: none;
+  }
+
+.work__list {
+  padding: 20px;
+}
+
+.top__work .contents ul li {
+  width: 100%;
+  margin: 5% 0;
+}
+
+.top__work .background {
+  margin-top: 70%;
+}
+
+.top__work .background span:nth-of-type(2) {
+  left: -12.7%;
+}
+
+.top__work .background span {
+  font-size: 26rem;
+  margin-left: -14%;
+}
+
+.top__work .contents ul {
+  padding: 18% 0 0;
+}
+
+footer {
+  padding: 6% 0 20%; 
+}
+
+footer .top__contact h2 {
+  padding: 0 0 3%;
+  font-size: 2rem;
+}
+
+footer .top__contact p {
+  font-size: 1rem;
+  margin: 3% 0;
+}
+
+footer .top__contact p i {
+  padding-right: 2%;
+}
+
+footer .copyright {
+  padding: 5% 0 0; 
+}
+
+}
+
