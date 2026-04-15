@@ -312,8 +312,8 @@ header .PORTFOLIO p {
 }
 .top__profile .profile__card li:first-of-type div {
   margin: 0 auto;
-  width: 38vh;
-  height: 38vh;
+  width: 15vw;
+  height: 15vw;
   background: linear-gradient(145deg, #1AB2E9, #1488B3);
   border-radius: 100%;
   box-shadow: inset 10.81px 10.81px 18px #1384AD, inset -10.81px -10.81px 18px #1BB6EF;
